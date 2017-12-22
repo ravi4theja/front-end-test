@@ -19,12 +19,11 @@ describe('App', () => {
     expect(wrapper.exists()).to.be.true();
   })
 
-  it('should render `Filter` and `PizzaList` components', () => {
+  it('should render connected `Filter` and `PizzaList` components', () => {
+    console.log(wrapper.debug());
       expect(wrapper.containsAllMatchingElements([
       <Filter />,
       <PizzaList />
     ])).to.be.true();
-  })
-
-  
+  }) 
 })

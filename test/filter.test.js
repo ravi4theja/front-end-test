@@ -26,7 +26,7 @@ describe('Filter component', () => {
   it('should call the props `filterPizzas` with the filter input when the user starts typing', () => {
     const filterTerm = 'i';
     wrapper.find('.input-filter').simulate('change', {target: {value: filterTerm}})
-    expect(mockFilterFunc.calledWith(filterTerm)).to.be.true()
+    expect(wrapper.instance().props.filterPizzas.calledWith(filterTerm)).to.be.true()
   })
   
   it('should render a sort button', () => {

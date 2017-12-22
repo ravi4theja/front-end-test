@@ -1,3 +1,6 @@
-export const FETCH_PIZZAS = 'FETCH_PIZZAS';
-export const FILTER_PIZZAS = 'FILTER_PIZZAS';
-export const SORT_PIZZAS = 'SORT_PIZZAS';
+
+export default Object.freeze({
+  FETCH_PIZZAS: 'FETCH_PIZZAS',
+  FILTER_PIZZAS: 'FILTER_PIZZAS',
+  SORT_PIZZAS: 'SORT_PIZZAS'
+})

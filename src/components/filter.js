@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { filterPizzas } from '../actions';
+import { filterPizzas, sortPizzas } from '../actions';
 import { connect } from 'react-redux';
 
 export class Filter extends Component {
@@ -8,9 +8,11 @@ export class Filter extends Component {
     this.props.filterPizzas(e.target.value);
   }
 
+  sortObj = {reverse: false};
+
   handleClickSort = () => {
-    const sortObj = {reverse: true};
-    this.props.sortPizzas(sortObj);
+    this.sortObj.reverse = !this.sortObj.reverse;
+    this.props.sortPizzas(this.sortObj);
   }
 
   render() {
@@ -24,4 +26,4 @@ export class Filter extends Component {
   }
 }
 
-export default connect(null, { filterPizzas })(Filter);
+export default connect(null, { filterPizzas, sortPizzas })(Filter);

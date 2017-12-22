@@ -1,19 +1,12 @@
-import fetch from 'isomorphic-fetch';
-import axios from 'axios';
-
-
-// import { store } from '../index';
-
-import { getPizzas } from '../utils/axiosUtils';
-import * as actionTypes from './action-types';
+import 'isomorphic-fetch';
+import actionTypes from './action-types';
 
 const url = '../../pizza.json';
 
-
-/* export const getPizzas = (url) => {
-   return axios.get(url)
-         .then(res => res.data)
-}  */
+export const getPizzas = (url) => {
+   return fetch(url)
+         .then(res => res.json())
+} 
 
 export const fetchPizzas = async () => {
   const data = await getPizzas(url);

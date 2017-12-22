@@ -23,9 +23,7 @@ import App from './components/app';
 
 ReactDOM.render(
   <Provider store={store}>
-    <div>
-      <App />
-    </div>
+    <App />
   </Provider>, 
   document.querySelector('.content')
 );

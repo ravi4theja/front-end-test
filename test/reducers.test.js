@@ -1,7 +1,7 @@
 import { expect } from 'code';
 
 import pizzaListReducer from '../src/reducers/pizza-list.reducer';
-import * as actionTypes from '../src/actions/action-types';
+import actionTypes from '../src/actions/action-types';
 
 describe('PizzaListReducer', () => {
 

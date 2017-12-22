@@ -1,4 +1,4 @@
-import * as actionTypes from '../actions/action-types';
+import actionTypes from '../actions/action-types';
 
 let absolutePizzaList;
 
@@ -19,7 +19,7 @@ export default (state=[], action) => {
         if(a > b) return -1;
         return 0
       }
-      return action.payload? state.sort(reverseSort): state.sort();
+      return action.payload? [ ...state.sort(reverseSort) ]: [ ...state.sort() ];
     }
     default: {
       return state;

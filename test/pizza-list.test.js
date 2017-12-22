@@ -6,13 +6,6 @@ import sinon from 'sinon';
 
 import ConnectedPizzaList, { PizzaList } from '../src/components/pizza-list';
 
-/* import { Provider } from 'react-redux';
-import { createStore, applyMiddleware  } from 'redux';
-import promise from 'redux-promise';
-import reducers from '../src/reducers';
-
-const createStoreWithMiddleware = applyMiddleware()(createStore)*/
-
 describe('PizzaList', () => {
 
   let wrapper;
@@ -38,9 +31,11 @@ describe('PizzaList', () => {
   it('should render the text `Loading...` and no other elements before the pizza data is loaded', () => {
     mockProps.pizzas = [];
     wrapper = shallow(<PizzaList { ...mockProps } />, {disableLifeCycleMethods: true});
-    expect(wrapper.containsMatchingElement(
+    expect(wrapper.equals(
       <div>Loading...</div>
     )).to.be.true()
+
+
   })
 
   it('should call `fetchPizzas` once the component is mounted', () => {
