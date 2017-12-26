@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchPizzas } from '../actions';
+import '../styles/main.css';
 
 export class PizzaList extends Component {
   componentDidMount() {
@@ -15,7 +16,7 @@ export class PizzaList extends Component {
 
   render() {
     const loader = (
-      <div>Loading...</div>
+      <div className='loading'>Loading...</div>
     )
     
     const pizzas = (

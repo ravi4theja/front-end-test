@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { filterPizzas, sortPizzas } from '../actions';
 import { connect } from 'react-redux';
+import '../styles/main.css';
 
 export class Filter extends Component {
 
@@ -17,9 +18,11 @@ export class Filter extends Component {
 
   render() {
     return (
-      <div>
-        <label>Filter</label>
-        <input className='input-filter' onChange={this.handleChange}/>
+      <div className='nav'>
+        <div className='filter'>
+          <label>Filter</label>
+          <input className='input-filter' onChange={this.handleChange}/>
+        </div>
         <button className='btn-sort'onClick={this.handleClickSort}>Sort</button>
       </div>
     )
