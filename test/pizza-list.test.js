@@ -32,7 +32,7 @@ describe('PizzaList', () => {
     mockProps.pizzas = [];
     wrapper = shallow(<PizzaList { ...mockProps } />, {disableLifeCycleMethods: true});
     expect(wrapper.equals(
-      <div>Loading...</div>
+      <div className='loading'>Loading...</div>
     )).to.be.true()
 
 
