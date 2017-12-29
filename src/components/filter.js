@@ -5,7 +5,7 @@ import '../styles/main.css';
 
 export class Filter extends Component {
 
-  handleChange = e => {
+  handleInputFilterChange = e => {
     this.props.filterPizzas(e.target.value);
   }
 
@@ -21,7 +21,7 @@ export class Filter extends Component {
       <div className='nav'>
         <div className='filter'>
           <label>Filter</label>
-          <input className='input-filter' onChange={this.handleChange}/>
+          <input className='input-filter' onChange={this.handleInputFilterChange}/>
         </div>
         <button className='btn-sort'onClick={this.handleClickSort}>Sort</button>
       </div>

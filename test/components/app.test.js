@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import { expect } from 'code';
 import { shallow } from 'enzyme';
 
-import App from '../src/components/app';
-import Filter from '../src/components/filter';
-import PizzaList from '../src/components/pizza-list';
+import App from '../../src/components/app';
+import Filter from '../../src/components/filter';
+import PizzaList from '../../src/components/pizza-list';
 
 describe('App', () => {
 

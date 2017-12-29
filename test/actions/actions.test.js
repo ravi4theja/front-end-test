@@ -2,9 +2,9 @@ import 'isomorphic-fetch';
 import sinon from 'sinon';
 import { expect } from 'code';
 import fetchMock from 'fetch-mock';
-import actionTypes from '../src/actions/action-types';
+import actionTypes from '../../src/actions/action-types';
 
-import * as actions from '../src/actions';
+import * as actions from '../../src/actions';
 
 const mockData = {pizzas: ['Chicken', 'Pepperoni']}
 

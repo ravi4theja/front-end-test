@@ -4,6 +4,7 @@ import { fetchPizzas } from '../actions';
 import '../styles/main.css';
 
 export class PizzaList extends Component {
+
   componentDidMount() {
     this.props.fetchPizzas();
   }
@@ -35,6 +36,7 @@ function mapStateToProps(state) {
   return {
     pizzas: state.pizzas
   }
+  
 }
 
 export default connect(mapStateToProps, { fetchPizzas })(PizzaList);

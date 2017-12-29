@@ -4,7 +4,7 @@ import { expect } from 'code';
 import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
 
-import ConnectedPizzaList, { PizzaList } from '../src/components/pizza-list';
+import ConnectedPizzaList, { PizzaList } from '../../src/components/pizza-list';
 
 describe('PizzaList', () => {
 

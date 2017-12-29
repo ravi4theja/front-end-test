@@ -2,9 +2,9 @@ import React from 'react';
 import { expect } from 'code';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
-import * as actions from '../src/actions';
+import * as actions from '../../src/actions';
 
-import { Filter } from '../src/components/filter';
+import { Filter } from '../../src/components/filter';
 
 describe('Filter component', () => {
   let wrapper;

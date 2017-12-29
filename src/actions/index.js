@@ -1,32 +1,28 @@
 import 'isomorphic-fetch';
 import actionTypes from './action-types';
+import { getPizzas } from '../utils/pizza-list';
 
-const url = '../../pizza.json';
-
-export const getPizzas = (url) => {
-   return fetch(url)
-         .then(res => res.json())
-} 
+const pizzaListURL = '../../pizza.json';
 
 export const fetchPizzas = async () => {
-  const data = await getPizzas(url);
+  const data = await getPizzas(pizzaListURL);
   return {
     type: actionTypes.FETCH_PIZZAS,
     payload: data.pizzas
   }
 }
 
-export const filterPizzas = (filterTerm) => {
-  return {
+export const filterPizzas = filterTerm => (
+  {
     type: actionTypes.FILTER_PIZZAS,
     payload: filterTerm
   }
-}
+)
 
-export const sortPizzas = (sortObj) => {
-  return {
+export const sortPizzas = sortObj => (
+  {
     type: actionTypes.SORT_PIZZAS,
     payload: sortObj.reverse
   }
-}
+)
 
