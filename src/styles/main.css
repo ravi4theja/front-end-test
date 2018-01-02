@@ -10,14 +10,15 @@ header {
   display: flex;
   background: black;
   color: white;
-  height: 60px;
+  height: 80px;
   padding-left: 30px;
   align-items: center;
   justify-content: left;
-  border-radius: 5px;
-  border-width: 7px;
-  border-style: solid;
-  border-color: #f5f9fa black ;
+  font-weight: 100;
+}
+
+h2 {
+  font-weight: 500;
 }
 
 em {
@@ -38,32 +39,15 @@ em {
 }
 
 .filter {
+  margin-right: 20px;
   padding: 10px;
   background-color: #f5f9fa;
-  border-radius: 5px;
-  border-width: 5px;
-  border-style: inset solid;
-  border-color: #83d0f2 black ;
 }
 
-.input-filter {
-  margin-left: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  height: 25px;
-}
-
-.input-filter:focus {
-  outline: none;
+label {
+  margin-right: 10px;
 }
 
 .btn-sort {
-  margin-left: 20px;
-  padding: 5px;
-  border-width: 5px;
-  border-style: inset solid;
-  border-radius: 5px;
-  border-color: #83d0f2 black ;
-  cursor: pointer;
-  background-color: #f5f9fa;
+  margin: 16px;
 }

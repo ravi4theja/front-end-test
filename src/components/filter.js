@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { filterPizzas, sortPizzas } from '../actions';
 import { connect } from 'react-redux';
 import '../styles/main.css';
+import RaisedButton from 'material-ui/RaisedButton';
+import TextField from 'material-ui/TextField';
 
 export class Filter extends Component {
 
@@ -21,9 +23,9 @@ export class Filter extends Component {
       <div className='nav'>
         <div className='filter'>
           <label>Filter</label>
-          <input className='input-filter' onChange={this.handleInputFilterChange}/>
+          <TextField onChange={this.handleInputFilterChange} />
         </div>
-        <button className='btn-sort'onClick={this.handleClickSort}>Sort</button>
+        <RaisedButton className='btn-sort' onClick={this.handleClickSort} label='Sort' />
       </div>
     )
   }
